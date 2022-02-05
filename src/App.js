@@ -18,7 +18,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import {fetchCities} from './store/siteSlice';
 import './style.css'
 const App = () => {
-  const cities = useSelector(state=>state.site.cities)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchCities())

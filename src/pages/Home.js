@@ -4,17 +4,82 @@ import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
 import Slider from './Slider';
 import axios from 'axios';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState([]);
   const [city, setCity] = useState([]);
+  const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
   const cityurl = 'https://www.ecindia.netwingsinfotech.in/api/city'
   const categoryurl = 'https://www.ecindia.netwingsinfotech.in/api/category'
   useEffect(() => {
     axios.get(categoryurl).then(res => {
       if (res.data.status === 200) {
         // console.log(res.data.category);
-        setCategory(res.data.category);
+        let categories = [...res.data.category]
+        categories.push({
+          "id": 2,
+          "name": "Home Supplies",
+          "status": 1,
+          "created_at": "2022-01-28T04:13:45.000000Z",
+          "updated_at": "2022-01-28T04:14:27.000000Z"
+      })
+      let data =   [{
+                  "id": 3,
+                  "name": "Home Supplies",
+                  "status": 1,
+                  "created_at": "2022-01-28T04:13:45.000000Z",
+                  "updated_at": "2022-01-28T04:14:27.000000Z"
+              },
+              {
+                  "id": 4,
+                  "name": "Home Supplies",
+                  "status": 1,
+                  "created_at": "2022-01-28T04:13:45.000000Z",
+                  "updated_at": "2022-01-28T04:14:27.000000Z"
+              },
+              {
+                  "id": 5,
+                  "name": "Home Supplies",
+                  "status": 1,
+                  "created_at": "2022-01-28T04:13:45.000000Z",
+                  "updated_at": "2022-01-28T04:14:27.000000Z"
+              },
+              {
+                  "id": 6,
+                  "name": "Home Supplies",
+                  "status": 1,
+                  "created_at": "2022-01-28T04:13:45.000000Z",
+                  "updated_at": "2022-01-28T04:14:27.000000Z"
+              },
+              {
+                  "id": 7,
+                  "name": "Home Supplies",
+                  "status": 1,
+                  "created_at": "2022-01-28T04:13:45.000000Z",
+                  "updated_at": "2022-01-28T04:14:27.000000Z"
+              }]
+        categories = data.concat(categories)
+        setCategory(categories);
         setLoading(false);
       }
     });
@@ -36,10 +101,10 @@ const Home = () => {
     var showCategoryList = '';
     showCategoryList = category.map((item,idx) => {
       return (
-        <div key={idx} className='col-sm-3 round'>
-          <div className='card '>
-            <img src='assets/img/ct1.jpg' height={150} />
-            <div className='card-body'>
+        <div key={idx} className='col-sm-3 '>
+          <div className='card col-lg-8 border-none'>
+            <img src='assets/img/ct1.jpg ' className="round mx-auto" height={150} />
+            <div className='card-body mx-auto'>
               <Link className="nav-link text-muted" to='scientific-laboratory-services'>{item.name}</Link>
             </div>
           </div>
@@ -74,7 +139,21 @@ const Home = () => {
       </div>
       <div className='container-fluid'>
         <div className='row'>
-          {showCategoryList}
+          <Carousel responsive={responsive}>
+            {category.map((item,idx) => {
+                return (
+                  <div key={idx} className='col-sm-8 mx-auto'>
+                    <div className='card col-lg-8 '>
+                      <img src='assets/img/ct1.jpg ' className="mx-auto" height={150} />
+                      <div className='card-body mx-auto'>
+                        <Link className="nav-link text-muted" to='scientific-laboratory-services'>{item.name}</Link>
+                      </div>
+                    </div>
+                  </div>
+                  
+                )
+              })}
+          </Carousel>;
         </div>
       </div>
       <div className='container-fluid'>

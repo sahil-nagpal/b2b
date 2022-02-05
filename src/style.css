@@ -7,3 +7,23 @@
     clip-path: circle();
     background: lightblue;
 }
+
+.react-tel-input{
+  width: 50%;
+}
+
+.otp-box-style{
+  width: 60% !important;
+  height: 50px;
+
+}
+.border-none{
+  border: 0px none;
+  width: 60%;
+}
+.carousel-item-padding-40-px{
+  background-color: red;
+}
+.bg-blue{
+  background-color: lightblue;
+}

@@ -1,9 +1,16 @@
-import React from 'react';
+import React ,{useState,useEffect} from 'react';
 import {Link } from "react-router-dom";
 import Header from '../layouts/Header';
 import Footer from '../layouts/Footer';
-
+import OtpModal from '../components/otp-modal'
 const Login = () => {
+  const [show,setShow] = useState(false)
+  const handleClose = ()=>{
+      setShow(false)
+    }
+  const showRegistrationModal = ()=>{
+    setShow(true)
+  }
     return (
         <>
         <Header />
@@ -39,12 +46,13 @@ const Login = () => {
   <input type="password" className='form-control' placeholder="Enter Password"/>
 </div>
 <div className='d-flex mb-3'>
-<div class="col-sm-4 offset-sm-1">
+<div className="col-sm-4 offset-sm-1">
   <button type="submit" className='btn btn-primary'>Login</button>
   </div>
-  <div class="col-sm-6 mb-3 offset-sm-1">New User &nbsp;
-  <Link className='userpage' to='/register'>Create Account</Link>&nbsp;&nbsp;<Link className='userpage' to='/forgot-password'>Forgot Password</Link>
+  <div className="col-sm-6 mb-3 offset-sm-1">New User &nbsp;
+  <a className='userpage' href="#javascript" onClick={showRegistrationModal}>Create Account</a>&nbsp;&nbsp;<a className='userpage' to='/forgot-password'>Forgot Password</a>
   </div>
+  <OtpModal handleClose={handleClose} show={show} setShow={setShow} />
   </div>
 </form>
           </div> 
