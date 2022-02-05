@@ -90,18 +90,17 @@ const OtpModal = (props)=>{
 
    else{
       setShowOtpForm(true)
-      console.log("step 1")
-      await dispatch(userActions.setNumberForOtp({"phoneNumber":editPhone}))
-      console.log("step 3")
-         verifier  =  new RecaptchaVerifier('sign-in-button', {
-            'size': 'invisible',
-              'callback': (response) => {
-                // reCAPTCHA solved, allow signInWithPhoneNumber.
-                console.log("okay");
-              }
-            }, auth)
+      dispatch(userActions.setNumberForOtp({"phoneNumber":editPhone}))
 
-        // sendOtp()
+      verifier  =  new RecaptchaVerifier('sign-in-button', {
+          'size': 'invisible',
+            'callback': (response) => {
+              // reCAPTCHA solved, allow signInWithPhoneNumber.
+              console.log("okay");
+            }
+          }, auth)
+
+        sendOtp()
       
       // window.recaptchaVerifier = new RecaptchaVerifier('sign-in-button', {}
       // , auth);
