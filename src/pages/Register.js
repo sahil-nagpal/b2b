@@ -6,13 +6,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 import {register} from '../api/userApi'
 import {toastConfig} from '../utils';
-
+import {useNavigate} from 'react-router-dom';
 const Register = () => {
   const [email, setEmail] = useState("");
   const {phoneAtOtpSection,otpVerified} = useSelector(state => state.user)
   const [mobile, setMobile] = useState(phoneAtOtpSection);
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
+  const {navigate} = useNavigate()
   const [password, setPassword] = useState("");
   const [user_type, setUserType] = useState("");
   const [product, setProduct] = useState("");
@@ -27,23 +28,23 @@ const Register = () => {
   const [image, setImage] = useState("");
   async function signUp(e) {
     e.preventDefault()
-    const formData = new FormData();
-
-    formData.append('email', email);
-    formData.append('mobile', mobile);
-    formData.append('name', name);
-    formData.append('company', company);
-    formData.append('password', password);
-    formData.append('user_type', user_type);
-    formData.append('product', product);
-    formData.append('quantity', quantity);
-    formData.append('unit', unit);
-    formData.append('order_value', order_value);
-    formData.append('description', description);
-    formData.append('specification', specification);
-    formData.append('price', price);
-    formData.append('status', status);
-    formData.append('mobile_verified',otpVerified)
+    const formData = {};
+    console.log("email :::",email)
+    formData['email']=  email
+    formData['mobile']=  mobile
+    formData['name']=  name
+    formData['company']=  company
+    formData['password']=  password
+    formData['user_type']=  user_type
+    formData['product']=  product
+    formData['quantity']=  quantity
+    formData['unit']=  unit
+    formData['order_value']=  order_value
+    formData['description']=  description
+    formData['specification']=  specification
+    formData['price']=  price
+    formData['status']=  status
+    formData['mobile_verified']= otpVerified    
     // formData.append('image', image);
     let response = await register(formData)
     if(response['success'] == false){
@@ -51,6 +52,7 @@ const Register = () => {
     }
     else{
       toast.success(response['message'],toastConfig)
+      navigate("/")
     }
   }
   return (
@@ -114,12 +116,12 @@ const Register = () => {
                 <div className='row mb-3 mt-3 ps-5'>
                   <div className='form-check d-flex'>
                     <div className='col-sm-3'>
-                      <input required name='user_type' className='form-check-input' type="radio" defaultValue="buyer" onChange={(e) => setUserType(e.target.value)} data-bs-toggle="modal" data-bs-target="#buyerModal"  />
+                      <input  name='user_type' className='form-check-input' type="radio" defaultValue="buyer" onChange={(e) => setUserType(e.target.value)} data-bs-toggle="modal" data-bs-target="#buyerModal"  />
                       <label className='form-check-label'>&nbsp;Buyer&nbsp;
                       </label>
                     </div>
                     <div className='col-sm-3'>
-                      <input required name='user_type' className='form-check-input' type="radio" defaultValue="seller" onChange={(e) => setUserType(e.target.value)} data-bs-toggle="modal" data-bs-target="#sellerModal"  />
+                      <input  name='user_type' className='form-check-input' type="radio" defaultValue="seller" onChange={(e) => setUserType(e.target.value)} data-bs-toggle="modal" data-bs-target="#sellerModal"  />
                       <label className='form-check-label'>&nbsp;Seller&nbsp;
                       </label>
                     </div>
@@ -146,13 +148,13 @@ const Register = () => {
                         <div className='row mb-3'>
                           <label className='col-sm-4 col-form-label'>Product Name</label>
                           <div className='col-sm-8'>
-                            <input required name='product' type="text" className='form-control' defaultValue={product} onChange={(e) => setProduct(e.target.value)} placeholder="Enter Product Name" required />
+                            <input name='product' type="text" className='form-control' defaultValue={product} onChange={(e) => setProduct(e.target.value)} placeholder="Enter Product Name" />
                           </div>
                         </div>
                         <div className='row mb-3'>
                           <label className='col-sm-4 col-form-label'>Quantity&nbsp;</label>
                           <div className='col-sm-8 d-flex'>
-                            <input required name='quantity' type="text" className='form-control' defaultValue={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="Enter Quantity" required />
+                            <input name='quantity' type="text" className='form-control' defaultValue={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="Enter Quantity" />
                             <div className='input-group-text bg-transparent'>
                               <select name='unit' className='citylist bg-transparent' defaultValue={unit} onChange={(e) => setUnit(e.target.value)} >
                                 <option>Select Unit</option>
@@ -235,13 +237,13 @@ const Register = () => {
                         <div className="row mb-3">
                           <label className='col-sm-2 col-form-label'>Price</label>
                         <div className='col-sm-6'>
-                          <input required name='price' type='text' className='form-control' defaultValue={price} onChange={(e) => setPrice(e.target.value)} />
+                          <input name='price' type='text' className='form-control' defaultValue={price} onChange={(e) => setPrice(e.target.value)} />
                         </div>
                       </div>
 
                       <div className='col-sm-4'>
                         <div className="form-check">
-                          <input required name='status' className="form-check-input" type="checkbox" id="status" defaultValue={status} onChange={(e) => setStatus(e.target.value)} />
+                          <input name='status' className="form-check-input" type="checkbox" id="status" defaultValue={status} onChange={(e) => setStatus(e.target.value)} />
 
                           <label className="form-check-label" htmlFor="status">
                             Publish your price
@@ -251,7 +253,7 @@ const Register = () => {
                       <div className="row mb-3">
                           <label htmlFor="image" className='form-label col-sm-4'>Product Images</label>
                           <div className='col-sm-8'>
-                          <input required name='image' className="form-control" type="file" id="formFile" onChange={(e) => setImage(e.target.files[0])} />
+                          <input name='image' className="form-control" type="file" id="formFile" onChange={(e) => setImage(e.target.files[0])} />
                         </div>
                       </div>
                     </div>

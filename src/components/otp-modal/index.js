@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from 'react';
+import React ,{useState} from 'react';
 import {Modal,Button} from 'react-bootstrap';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css';
@@ -6,10 +6,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { isPossiblePhoneNumber, isValidPhoneNumber } from 'react-phone-number-input';
 import OtpInput  from 'react-otp-input';
-import firebase ,{auth} from '../../firebase';
+import  {auth} from '../../firebase';
 import { useNavigate } from "react-router-dom";
 import { signInWithPhoneNumber,RecaptchaVerifier } from "firebase/auth";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {userActions} from '../../store/userSlice';
 let verifier = ''
 const OtpModal = (props)=>{
@@ -26,7 +26,7 @@ const OtpModal = (props)=>{
    
 
    const sendOtp = ()=>{
-    if(editPhone !=''){
+    if(editPhone !==''){
       signInWithPhoneNumber(auth, editPhone, verifier)
         .then((confirmationResult) => {
           window.confirmationResult = confirmationResult
@@ -54,7 +54,7 @@ const OtpModal = (props)=>{
 
    const handleSubmit = async()=>{
     if(showOtpForm){
-      if(otpValue == ""){
+      if(otpValue === ""){
         toast.error("Otp invalid",{
           position: "top-right",
           autoClose: 2000,

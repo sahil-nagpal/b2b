@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export const register = async (formData)=>{
+	console.log("formData :::::: ",formData)
 	let response = await fetch("https://www.ecindia.netwingsinfotech.in/api/register", {
       method: 'POST',
       body: JSON.stringify(formData)
