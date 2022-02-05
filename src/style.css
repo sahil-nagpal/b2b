@@ -1,0 +1,9 @@
+.round {
+  float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: lightblue;
+}
