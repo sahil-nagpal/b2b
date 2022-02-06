@@ -4,7 +4,7 @@ import {  faDotCircle, faMapMarkerAlt, faSearch } from '@fortawesome/free-solid-
 import './style.css';
    
 
-function Index() {
+function LocationHeader() {
   return <div className='d-flex flex-row border col-12 container-fluid' style={{fontSize: '15px',fontFamily:'arial'}}>
       <div className='border-right ml-1 col-4'>
       <ul id='unorderList' className='d-flex justify-content-around flex-row text-secondary'>
@@ -33,4 +33,4 @@ function Index() {
   </div>
 }
 
-export default Index;
+export default LocationHeader;
