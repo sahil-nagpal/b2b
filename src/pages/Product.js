@@ -92,7 +92,7 @@ const ProductPage = ()=>{
 					<ContentCard/>
 					
 				</div>
-				<div className="col-8 mb-2 pd-2 "></div>
+				<div className="col-2 mb-2 pd-2 "></div>
 			</div>
 		</>
 
