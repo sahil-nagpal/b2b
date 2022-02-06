@@ -18,6 +18,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {fetchCities} from './store/siteSlice';
 import ProductPage from './pages/Product';
 import './style.css';
+
 const App = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -39,6 +40,9 @@ const App = () => {
       <Route exact path='/forgot-password' element={<Forgot/>}></Route>
       <Route exact path='/product' element={<ProductPage/>}></Route>
     </Routes>
+      
+
+
      </>
   );
 };

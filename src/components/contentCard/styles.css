@@ -1,0 +1,45 @@
+#image{
+    height: 250px;
+    width: 250px;
+}
+
+#h3,#b{
+    color: #1b158f;
+}
+
+#unorder{
+    list-style-type: none;
+}
+#p2{
+    font-size: 14px;
+}
+
+#links1{
+    border: 1px solid green;
+    text-decoration: none;
+    color: rgb(7, 100, 7);
+    padding: 10px;
+}
+#links2{
+    border: 1px solid rgb(7, 100, 7);
+    background-color: rgb(7, 100, 7);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.linking{
+    margin: 5px;
+    text-align: center;
+}
+.links{
+    color: rgb(7, 100, 7);
+    font-weight: bold;
+}
+
+.text-dark{
+    font-weight: 600;
+}
+#listWithFont{
+    
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import FilterSideBar from '../components/filters-sidebar';
 import TitleHeader from '../components/title';
-import CategoryBox from '../components/category-box'
+import CategoryBox from '../components/category-box';
+import LocationHeader from '../components/location-header';
+import ContentCard from '../components/contentCard'
 const ProductPage = ()=>{
 	const demoData = [
 		{
@@ -97,13 +99,17 @@ const ProductPage = ()=>{
 	  ]
 	return (
 		<>
-
+			<LocationHeader />
 			<div className="col-12 d-flex mb-4 bg-bd">
+
 				<div className="col-2 m-178 ml-3"><FilterSideBar/></div>
-				<div className="col-10 mb-2 pd-2  lay-left">
+				<div className="col-8 mb-2 pd-2  lay-left">
 					<TitleHeader title={"Categories to explore"} />
 					<CategoryBox data={demoData} />
+					<ContentCard/>
+					
 				</div>
+				<div className="col-8 mb-2 pd-2 "></div>
 			</div>
 		</>
 
