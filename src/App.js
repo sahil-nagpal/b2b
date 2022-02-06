@@ -17,7 +17,7 @@ import Alertlead from './pages/Alertlead';
 import { useSelector, useDispatch } from 'react-redux';
 import {fetchCities} from './store/siteSlice';
 import ProductPage from './pages/Product';
-import './style.css'
+import './style.css';
 const App = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
