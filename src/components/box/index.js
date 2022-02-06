@@ -7,12 +7,8 @@ const BoxList = (props)=>{
 			<div className="title-box">
 				<span className="label-name">{props.title}</span>
 			</div>
-			<div>
-				<ul>
-					<li>1</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
+			<div className="cell-bx">
+				{props.children}
 			</div>
 
 		</div>

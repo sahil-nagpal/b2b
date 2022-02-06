@@ -5,9 +5,9 @@ const ProductPage = ()=>{
 	return (
 		<>
 
-			<div className="col-12 d-flex">
-				<div className="col-4"><FilterSideBar/></div>
-				<div className="col-8"></div>
+			<div className="col-12 d-flex mb-4">
+				<div className="col-2"><FilterSideBar/></div>
+				<div className="col-10 mb-2 pd-2 bg-blue">43</div>
 			</div>
 		</>
 
