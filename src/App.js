@@ -15,7 +15,7 @@ import Subsribe from './pages/Subscribe';
 import Leads from './pages/Leads';
 import Alertlead from './pages/Alertlead';
 import { useSelector, useDispatch } from 'react-redux';
-import {fetchCities} from './store/siteSlice';
+import {fetchCities,fetchCategories} from './store/siteSlice';
 import ProductPage from './pages/Product';
 import './style.css';
 
@@ -23,6 +23,7 @@ const App = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchCities())
+    dispatch(fetchCategories())
   },[])
   return (
      <>

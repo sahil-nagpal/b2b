@@ -38,6 +38,9 @@ const Header = () => {
         <li className='nav-item'>
         <Link className='nav-link' to='/post-your-requirements'>Post Buy Requirement</Link>
         </li>
+        <li className='nav-item'>
+        <Link className='nav-link' to='/product'>Product</Link>
+        </li>
       <li className="nav-item dropdown">
         <Link className='nav-link'to='/covid-19-essentials'>Covid-19 Essentials</Link>
         </li>
