@@ -4,9 +4,9 @@ const CategoryBox = (props)=>{
     console.log("props ::::",props.data)
     return (
         <>
-            <div className="cat-bx d-flex justify-content-between">
+            <div className="cat-bx d-flex justify-content-between align-items-start">
                 {props.data.map((item,idx)=>{
-                    return <Card imgTitle={item.name} imgUrl={item.image}  />
+                    return <Card key={idx} imgTitle={item.name} imgUrl={item.image}  />
                 })}
                 
             </div>
