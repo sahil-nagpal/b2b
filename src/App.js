@@ -16,6 +16,7 @@ import Leads from './pages/Leads';
 import Alertlead from './pages/Alertlead';
 import { useSelector, useDispatch } from 'react-redux';
 import {fetchCities} from './store/siteSlice';
+import ProductPage from './pages/Product';
 import './style.css'
 const App = () => {
   const dispatch = useDispatch()
@@ -36,6 +37,7 @@ const App = () => {
       <Route exact path='/register' element={<Register/>}></Route>
       <Route exact path='/login' element={<Login/>}></Route>
       <Route exact path='/forgot-password' element={<Forgot/>}></Route>
+      <Route exact path='/product' element={<ProductPage/>}></Route>
     </Routes>
      </>
   );

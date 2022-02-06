@@ -5,7 +5,7 @@ import Footer from '../layouts/Footer';
 import Slider from './Slider';
 import axios from 'axios';
 import Carousel from 'react-multi-carousel';
-import FilterSideBar from '../components/filters-sidebar';
+
 import 'react-multi-carousel/lib/styles.css';
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -131,7 +131,6 @@ const Home = () => {
     <>
       <Header />
       <Slider />
-      <FilterSideBar />
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-sm-12 my-4'>
