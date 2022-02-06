@@ -1,7 +1,8 @@
 import React from 'react';
 import FilterSideBar from '../components/filters-sidebar';
 import TitleHeader from '../components/title';
-import CategoryBox from '../components/category-box'
+import CategoryBox from '../components/category-box';
+import Index from '../components/location-header';
 const ProductPage = ()=>{
 	const demoData = [
 		{
@@ -37,7 +38,7 @@ const ProductPage = ()=>{
 	  ]
 	return (
 		<>
-
+				<Index />
 			<div className="col-12 d-flex mb-4">
 				<div className="col-2 m-178 ml-3"><FilterSideBar/></div>
 				<div className="col-10 mb-2 pd-2  lay-left">
