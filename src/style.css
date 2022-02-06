@@ -28,15 +28,24 @@
   background-color: lightblue;
 }
 .box{
-  border :1px solid gray;
+  border: 1px solid #dadada;
+  background: #fff;
+  width: 177px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+
 }
 .title-box{
-  background-color: #E9EAEA;
+  background-color: #F2F2F2;
   width: 100%;
   padding: 8px 20px 8px 8px;
   border-bottom: 1px solid #ccc;
+}
+
+.m-178 {
+   width: 178px !important;
+   margin: 0px;
 }
 
 .label-name {
@@ -49,6 +58,7 @@
 .cell-bx {
     border: 1px solid #dadada;
     border-top: 0;
+
 }
 
 .simple-ul{
@@ -56,4 +66,114 @@
     padding-left: 14px;
     padding-right: 11px;
     background: #fff;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+.simple-ul li:first-child {
+    padding-top: 10px;
+}
+
+.mainTitle {
+  font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.simple-ul li{
+  font-family: arial;
+  font-size: 14px;
+  list-style: none;
+  display: block;
+  padding: 5px 0;
+  line-height: 15px;
+  word-break: break-word;
+  -moz-word-wrap: break-word;
+  word-wrap: break-word;
+
+}
+.checkBox-ul{
+  padding-top: 12px;
+  position: relative;
+}
+.checkBox-ul input[type="checkbox"]{
+    transform: scale(1);
+    position: absolute;
+    top: 3px;
+}
+
+.check-li{
+    color: #212529;
+    font-size: 14px;
+    font-family: Arial;
+    display: flex;
+    padding: 0 5px 12px 0;
+    margin: 0 0 -2px 0;
+    z-index: 2;
+    position: relative;
+}
+
+.filter-link-style:hover {
+  cursor: pointer;
+  color: red;
+}
+.link-style-none{
+  text-decoration: none;
+  color: #212529;
+}
+
+.category-link-style:hover {
+  cursor: pointer;
+   color: #212529;
+ text-decoration: underline;
+}
+
+.lay-left{
+  margin: 3px 0px 0 11px;
+  padding: 0;
+  box-sizing:border-box;
+  float:right;
+}
+
+.cat-bx{
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 10px;
+     
+}
+
+.cat_box{
+  max-width: 120px;
+  min-width: 120px;
+  margin: 0 4px 0 0;
+  border: 1px solid #dadada;
+  background-color: #f6f6f6;
+  padding-bottom: 6px;
+}
+
+
+.cat_img img {
+    max-width: 116px;
+    height: 116px;
+    border-radius:3px;
+    box-sizing:border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cat_name {
+  font-size: 13px;
+    padding: 5px 4px 0 6px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+}
+
+.max-width {
+  max-width: 120px;
+  min-width: 120px;
 }
