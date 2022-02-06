@@ -139,9 +139,9 @@
 
 .cat-bx{
   position: relative;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   overflow: hidden;
-  width: 100%;
+  width: 88%;
   padding-top: 10px;
      
 }
@@ -154,7 +154,9 @@
   background-color: #f6f6f6;
   padding-bottom: 6px;
 }
-
+.bg-bd{
+  background-color: #E9EAEA;
+}
 
 .cat_img img {
     max-width: 116px;
