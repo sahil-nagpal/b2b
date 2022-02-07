@@ -98,7 +98,7 @@ const ProductPage = ()=>{
 	return (
 		<>
 
-			<div className="col-12 d-flex mb-4 bg-bd">
+			<div className="col-12 d-flex mb-4 bg-bd px-2">
 				<div className="col-2 m-178 ml-3"><FilterSideBar/></div>
 				<div className="col-10 mb-2 pd-2  lay-left">
 					<TitleHeader title={"Categories to explore"} />
