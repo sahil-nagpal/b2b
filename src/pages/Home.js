@@ -37,49 +37,6 @@ const Home = () => {
       if (res.data.status === 200) {
         // console.log(res.data.category);
         let categories = [...res.data.category]
-        categories.push({
-          "id": 2,
-          "name": "Home Supplies",
-          "status": 1,
-          "created_at": "2022-01-28T04:13:45.000000Z",
-          "updated_at": "2022-01-28T04:14:27.000000Z"
-      })
-      let data =   [{
-                  "id": 3,
-                  "name": "Home Supplies",
-                  "status": 1,
-                  "created_at": "2022-01-28T04:13:45.000000Z",
-                  "updated_at": "2022-01-28T04:14:27.000000Z"
-              },
-              {
-                  "id": 4,
-                  "name": "Home Supplies",
-                  "status": 1,
-                  "created_at": "2022-01-28T04:13:45.000000Z",
-                  "updated_at": "2022-01-28T04:14:27.000000Z"
-              },
-              {
-                  "id": 5,
-                  "name": "Home Supplies",
-                  "status": 1,
-                  "created_at": "2022-01-28T04:13:45.000000Z",
-                  "updated_at": "2022-01-28T04:14:27.000000Z"
-              },
-              {
-                  "id": 6,
-                  "name": "Home Supplies",
-                  "status": 1,
-                  "created_at": "2022-01-28T04:13:45.000000Z",
-                  "updated_at": "2022-01-28T04:14:27.000000Z"
-              },
-              {
-                  "id": 7,
-                  "name": "Home Supplies",
-                  "status": 1,
-                  "created_at": "2022-01-28T04:13:45.000000Z",
-                  "updated_at": "2022-01-28T04:14:27.000000Z"
-              }]
-        categories = data.concat(categories)
         setCategory(categories);
         setLoading(false);
       }
