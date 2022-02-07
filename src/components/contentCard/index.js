@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faClipboardCheck, faCrown, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 function ContentCard() {
-  return <div className='d-flex m-2 sampleBorder'>
+  return <div className='d-flex mt-2 sampleBorder'>
         <div className='d-flex w-50'>
             <img src='https://images.pexels.com/photos/9693624/pexels-photo-9693624.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260' alt='ima' id='image'/>
             {/* <a href='/'>Watch Video</a> */}

@@ -65,7 +65,6 @@ const OtpModal = (props)=>{
       }
       let confirmationResult = window.confirmationResult;
       confirmationResult.confirm(otpValue).then((result)=>{
-        console.log("result ::::::",result)
         setHandleOtp('')
         setShow(false)
         setSendOtpAgain(false)

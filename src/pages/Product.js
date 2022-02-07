@@ -83,7 +83,7 @@ const ProductPage = ()=>{
 	return (
 		<>
 			<LocationHeader />
-			<div className="col-12 d-flex mb-4 bg-bd px-2">
+			<div className="col-12 d-flex mb-4 px-2">
 
 
 				<div className="col-2 m-178 ml-3"><FilterSideBar/></div>
