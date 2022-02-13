@@ -1,7 +1,8 @@
+
 .round {
   float: left;
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     margin: 20px;
     shape-outside: circle();
     clip-path: circle();
@@ -184,6 +185,40 @@
 .sampleBorder {
   border: 1px solid #dadada;
 }
+.upDownBorder {
+  border-top: 1px solid #dadada;
+  border-bottom:  1px solid #dadada;
+}
+
+.boxStructure{
+  border: 1px solid #dadada;
+}
+
+.link-list li:hover{
+  background-color: #dadada;
+}
+.boxShadowGenerator{
+  box-shadow: 2px 2px 5px -1px rgba(184,181,181,0.75);
+-webkit-box-shadow: 2px 2px 5px -1px rgba(184,181,181,0.75);
+-moz-box-shadow: 2px 2px 5px -1px rgba(184,181,181,0.75);
+}
+
 .bg-gry{
   background-color: rgba(233,234,234,0.5);
 }
+.mt-64{
+  margin-top: 64px;
+}
+.imageSidebar{
+  margin-left: 20px;
+}
+.fontArial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.newFont{
+  font-size: 14px;
+}
+.link-list{
+  list-style: none;
+}
+

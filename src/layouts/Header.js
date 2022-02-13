@@ -39,6 +39,9 @@ const Header = () => {
         <Link className='nav-link' to='/post-your-requirements'>Post Buy Requirement</Link>
         </li>
         <li className='nav-item'>
+        <Link className='nav-link' to='/dashboard'>Dashboard</Link>
+        </li>
+        <li className='nav-item'>
         <Link className='nav-link' to='/product'>Product</Link>
         </li>
       <li className="nav-item dropdown">

@@ -17,6 +17,7 @@ import Alertlead from './pages/Alertlead';
 import { useSelector, useDispatch } from 'react-redux';
 import {fetchCities,fetchCategories} from './store/siteSlice';
 import ProductPage from './pages/Product';
+import Dashboard from './pages/Dashboard';
 import './style.css';
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
       <Route exact path='/login' element={<Login/>}></Route>
       <Route exact path='/forgot-password' element={<Forgot/>}></Route>
       <Route exact path='/product' element={<ProductPage/>}></Route>
+      <Route exact path='/dashboard' element={<Dashboard/>}></Route>
     </Routes>
       
 

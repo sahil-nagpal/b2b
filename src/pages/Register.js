@@ -52,7 +52,7 @@ const Register = () => {
     }
     else{
       toast.success(response['message'],toastConfig)
-      navigate("/")
+      navigate("/dashboard")
     }
   }
   return (
